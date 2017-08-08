@@ -7,6 +7,7 @@
  * https://www.codeproject.com/Articles/541067/Cplusplus-Smart-Pointers  */
 
 
+
 using namespace std;
 //***************************************************************
 class Test
