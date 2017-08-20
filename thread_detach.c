@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <pthread.h>
-
+#include <unistd.h>
 void *thread_func(void *arg);
 
 int main(int argc, char **argv)
@@ -21,7 +21,9 @@ int main(int argc, char **argv)
 
     if (s != 0)
         printf("Err\n");
-
+    
+    printf("waiting for the thread to complete without using pthread_join");
+    pthread_exit(0);
     printf("Main Exiting\n");
     return 0;
 }
