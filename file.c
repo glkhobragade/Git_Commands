@@ -9,7 +9,7 @@ int main()
 	fp = fopen("a.txt", "a+");
 	if(!fp)
 	printf("Opened file successfully");
-	sleep(50);
+	sleep(60);
 	fclose(fp);
 	return 0;
 }
