@@ -86,7 +86,7 @@ print ("16th byte of actual plain text", plain[15])
 ## Second round
 
 for i in range(256):
-    c_ = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"+ chr(i)+chr(last_byte^02)
+    c_ = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"+ chr(i)+chr(list_I[15]^02)
     print("our c_ block is", c_)
     print("the length is = ", len(c_))
     print("\n")
@@ -102,13 +102,65 @@ for i in range(256):
         #last_byte = plain_[31]^chr(i)^IV[0]
         print(int(plain_[31].encode('hex')))
         print(i)
-        print(int(IV[15].encode('hex'), 16))
+        print(int(IV[14].encode('hex'), 16))
         last_byte = int(plain_[31].encode('hex'), 16)^i^int(IV[14].encode('hex'), 16)
-        list_I[round]=i^02
+        list_I[14]=i^02
         round-=1
         print ("last byte = ", last_byte)
         break
 
-print("Hello")
 
-list_I.append(last_byte)
+## Third round
+
+for i in range(256):
+    c_ = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"+ chr(i)+chr(list_I[14]^03)+chr(list_I[15]^03)
+    print("our c_ block is", c_)
+    print("the length is = ", len(c_))
+    print("\n")
+    cipher_ = c_ + ciphertext[:16]
+    print("manipulated ciphertext is: ", cipher_)
+    print("length= ", len(cipher_))
+    plain_ = obj2.decrypt(cipher_)
+    print("new decrypted text is =", plain_)
+    print("new decrypted text length is =", len(plain_))
+
+    if plain_[29] == '\x03':
+        print ("I got the corresponding plaintext")
+        #last_byte = plain_[31]^chr(i)^IV[0]
+        print(int(plain_[31].encode('hex')))
+        print(i)
+        print(int(IV[13].encode('hex'), 16))
+        last_byte = int(plain_[31].encode('hex'), 16)^i^int(IV[13].encode('hex'), 16)
+        list_I[13]=i^03
+        round-=1
+        print ("last byte = ", last_byte)
+        break
+
+
+## Fourth round
+
+for i in range(256):
+    c_ = "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"+ chr(i)+chr(list_I[13]^04)+chr(list_I[14]^04)+chr(list_I[15]^04)
+    print("our c_ block is", c_)
+    print("the length is = ", len(c_))
+    print("\n")
+    cipher_ = c_ + ciphertext[:16]
+    print("manipulated ciphertext is: ", cipher_)
+    print("length= ", len(cipher_))
+    plain_ = obj2.decrypt(cipher_)
+    print("new decrypted text is =", plain_)
+    print("new decrypted text length is =", len(plain_))
+
+    if plain_[28] == '\x04':
+        print ("I got the corresponding plaintext")
+        #last_byte = plain_[31]^chr(i)^IV[0]
+        print(int(plain_[31].encode('hex')))
+        print(i)
+        print(int(IV[12].encode('hex'), 16))
+        last_byte = int(plain_[31].encode('hex'), 16)^i^int(IV[12].encode('hex'), 16)
+        list_I[12]=i^04
+        round-=1
+        print ("last byte = ", last_byte)
+        break
+
+
