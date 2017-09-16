@@ -1,4 +1,3 @@
-from __future__ import print_function
 from Crypto.Cipher import AES
 import sys
 from Crypto import Random
@@ -16,6 +15,8 @@ def ATT(c, v, n):
     pos = 0
     C0 = v
     comp_plain = ""
+    print("cipertext is =====> ", c)
+    print("cipertext length is =====> ", len(c))
 
     for block in range(no_of_blocks):
         #print ("I am in block number: ", block)
@@ -90,12 +91,7 @@ def AES_Padding(p, n, v):
     p += padding
 
     ciphertext = obj.encrypt(p)
-    print ("##ciphertext C is = ", sep=' ', end=' ')
-    for char in ciphertext:
-	mm = int(char.encode('hex'), 16)
-	print(hex(mm), sep=' ', end=' ' )
-
-    print("\n")
+    print ("##ciphertext C is =", ciphertext)
     print ("##ciphertext C length is =", len(ciphertext))
     return ciphertext
 

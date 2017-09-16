@@ -1,4 +1,3 @@
-from __future__ import print_function
 from Crypto.Cipher import AES
 import sys
 from Crypto import Random
@@ -8,7 +7,7 @@ IV =  "\x11\x22\x33\x44\x55\x66\x77\x88\x99\xAA\xBB\xCC\xDD\xEE\xFF\x00"
 KEY = "\x6B\x6B\x6B\x6B\x6B\x6B\x6B\x6B\x6B\x6B\x6B\x6B\x6B\x6B\x6B\x6B"
 
 # =========================== Oracle Attack Starts ========================================
-def ATT(c, v, n):
+def ATT(c, v):
     list_I = ['\0x00','\0x00','\0x00','\0x00','\0x00','\0x00','\0x00','\0x00','\0x00','\0x00','\0x00','\0x00','\0x00','\0x00','\0x00','\0x00']
     round = 1;
     list_p = []
@@ -58,8 +57,6 @@ def ATT(c, v, n):
                     #print ("last byte = ", last_byte)
                     list_p.append(chr(last_byte))
                     break
-
-        print("list of char is ==>", list_p)
         plain_text_computed = list_p[::-1]
         plain_text_computed_ = "".join(plain_text_computed)
         comp_plain += plain_text_computed_
@@ -90,13 +87,7 @@ def AES_Padding(p, n, v):
     p += padding
 
     ciphertext = obj.encrypt(p)
-    print ("##ciphertext C is = ", sep=' ', end=' ')
-    for char in ciphertext:
-	mm = int(char.encode('hex'), 16)
-	print(hex(mm), sep=' ', end=' ' )
-
-    print("\n")
-    print ("##ciphertext C length is =", len(ciphertext))
+    print ("##ciphertext C is =", ciphertext)
     return ciphertext
 
 
@@ -117,5 +108,5 @@ print ("number of ciphertext blocks  =", len(ciphertext)/16)
 
 
 ## ============ start the oracle attack =======================
-pt_broken = ATT(ciphertext, IV, no_of_blocks)
+pt_broken = ATT(ciphertext, IV)
 print ("done and broken plain text is ", pt_broken)
