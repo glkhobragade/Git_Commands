@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.5)
 
 
 project(text)
-add_executable(text test.cpp)
-
 message(STATUS "GHANSHAM")
 message(STATUS "cmake current source ==>" "${CMAKE_CURRENT_SOURCE_DIR}")
 message(STATUS "project source ==>" "${PROJECT_SOURCE_DIR}")
@@ -34,4 +32,3 @@ message("The list value is: ${LIST_VARIABLE}")
 message("CMAKE_CXX_FLAGS_DEBUG is ${CMAKE_CXX_FLAGS_DEBUG}")
 message("CMAKE_CXX_FLAGS_RELEASE is ${CMAKE_CXX_FLAGS_RELEASE}")
 
-add_subdirectory(subdir)
