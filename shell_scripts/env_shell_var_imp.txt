@@ -1,2 +1,0 @@
-Please go through this link first to understand it properly
-https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps
