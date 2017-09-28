@@ -2,7 +2,34 @@ cmake_minimum_required(VERSION 3.5)
 
 
 project(text)
+
+
+set(COMPONENT_VERSION 3.1.2)
+SET(PACKAGE_VERSION "${COMPONENT_VERSION}")
+
 add_executable(text test.cpp)
+add_library(sqrt  SHARED sqrt.cpp)
+
+# below line activates the DEBUG flag in all the compilation command
+# it can be checked whether it works in subdirectory as well.
+## from website: Adds definitions to the compiler command line for targets in the current directory and below.
+
+OPTION(MYDEB " This is option to enable or disable flag" OFF)
+#run the command as below to enable the flag which is disabled by default using above line;
+#cmake -DMYDEB=ON ..   or
+#cmake -D CMAKE_COMPILE_DEFINITIONS="DEB"  ..   or
+# cmake -D CMAKE_CXX_FLAGS="-DDEB" ..     #but this will override the other default flags for your compiler.
+
+
+if(${MYDEB})
+    add_definitions(-DDEB)
+endif()
+
+# the below lines will set the version number to the executable and library
+# the link will be made accordingly using the original name(without version number)
+set_target_properties(text PROPERTIES  VERSION "${COMPONENT_VERSION}")
+set_target_properties(sqrt PROPERTIES  VERSION "${COMPONENT_VERSION}")
+#set_target_properties(sqrt PROPERTIES  SUFFIX "dynamic")
 
 set(GHANSHAM "RAMRAM")
 message(STATUS "GHANSHAM")
