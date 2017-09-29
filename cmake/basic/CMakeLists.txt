@@ -40,6 +40,12 @@ message(STATUS "cmake source ==>" "${CMAKE_SOURCE_DIR}")
 message(STATUS "cmake binary ==>" "${CMAKE_BINARY_DIR}")
 message(STATUS "cmake root ==>" "${CMAKE_ROOT}")
 
+find_package(my_library)
+message(STATUS "my library found? ==> " "${my_library_FOUND}")
+message(STATUS "my library include ==>" "${my_library_INCLUDE_DIR}")
+#include_directories("${my_library_INCLUDE_DIR}")
+
+set(CMAKE_PREFIX_PATH "/home/ghansham/Programs/Git_Commands/cmake/foonathan.net/runtime/lib/my_library-1.0/")
 find_package(BZip2)
 message(STATUS "${CMAKE_MODULE_PATH}")
 message(STATUS "${BZIP2_FOUND}")

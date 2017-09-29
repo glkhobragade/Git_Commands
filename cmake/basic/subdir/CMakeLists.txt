@@ -22,13 +22,15 @@ message(STATUS "Gtest found: " "${GTest_FOUND}")
 message(STATUS "GTest Include: " "${GTest_INCLUDE_DIR}")
 message(STATUS "Gtest Libraries: " "${GTest_LIBRARIES}")
 
-set(STRING_VARIABLE "value")
 set(LIST_VARIABLE "value1 value2")
 
-message("The string value is: ${STRING_VARIABLE}")
+message("The string value in subdir is: ${STRING_VARIABLE}")
 message("The list value is: ${LIST_VARIABLE}")
 
 ## cmake -DCMAKE_CXX_FLAGS_DEBUG=ON -DCMAKE_CXX_FLAGS_RELEASE=True .. <===  this line will override the below variables default value.
 message("CMAKE_CXX_FLAGS_DEBUG is ${CMAKE_CXX_FLAGS_DEBUG}")
 message("CMAKE_CXX_FLAGS_RELEASE is ${CMAKE_CXX_FLAGS_RELEASE}")
+
+
+
 

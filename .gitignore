@@ -1,3 +1,7 @@
 a.out
 dlopen
 cmake/build
+cmake/basic/build/
+google_test/build/
+cmake/foonathan.net/build/
+cmake/foonathan.net/runtime/
