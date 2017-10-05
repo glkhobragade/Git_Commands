@@ -59,6 +59,12 @@ message(STATUS "Gtest found: " "${GTest_FOUND}")
 message(STATUS "GTest Include: " "${GTest_INCLUDE_DIR}")
 message(STATUS "Gtest Libraries: " "${GTest_LIBRARIES}")
 
+
+find_package(Boost)
+message(STATUS "Boost found: " "${Boost_FOUND}")
+message(STATUS "Boost Include: " "${Boost_INCLUDE_DIR}")
+message(STATUS "Boost Libraries: " "${Boost_LIBRARIES}")
+
 set(STRING_VARIABLE "value")
 set(LIST_VARIABLE "value1 value2")
 
