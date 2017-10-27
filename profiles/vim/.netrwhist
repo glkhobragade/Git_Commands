@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/ghansham/minimal_ros/drivecore/examples'
+let g:netrw_dirhist_2='/home/ghansham/minimal_ros/drivecore/examples/NodeManager_generic'
+let g:netrw_dirhist_3='/home/ghansham/Programs/Git_Commands/cmake/basic'
+let g:netrw_dirhist_4='/home/ghansham/Programs/Git_Commands/cmake/FooBar/build/bar/CMakeFiles'
