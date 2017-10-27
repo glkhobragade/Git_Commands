@@ -47,7 +47,8 @@ message(STATUS "my library include ==>" "${my_library_INCLUDE_DIR}")
 
 set(CMAKE_PREFIX_PATH "/home/ghansham/Programs/Git_Commands/cmake/foonathan.net/runtime/lib/my_library-1.0/")
 find_package(BZip2)
-message(STATUS "${CMAKE_MODULE_PATH}")
+message(STATUS "module_path ==>" "${CMAKE_MODULE_PATH}")
+message(STATUS "config file path==>" "${BZIP2_CONFIG}")
 message(STATUS "${BZIP2_FOUND}")
 message(STATUS "${BZIP2_INCLUDE_DIR}")
 message(STATUS "${BZIP2_LIBRARIES}")
@@ -64,12 +65,14 @@ find_package(Boost)
 message(STATUS "Boost found: " "${Boost_FOUND}")
 message(STATUS "Boost Include: " "${Boost_INCLUDE_DIR}")
 message(STATUS "Boost Libraries: " "${Boost_LIBRARIES}")
+message(STATUS "Boost Libraries_Dir: " "${Boost_LIBRARY_DIRS}")
 
 set(STRING_VARIABLE "value")
 set(LIST_VARIABLE "value1 value2")
 
 message("The string value is: ${STRING_VARIABLE}")
 message("The list value is: ${LIST_VARIABLE}")
+message("The lib is: ${LIBS}")
 
 ## cmake -DCMAKE_CXX_FLAGS_DEBUG=ON -DCMAKE_CXX_FLAGS_RELEASE=True .. <===  this line will override the below variables default value.
 message("CMAKE_CXX_FLAGS_DEBUG is ${CMAKE_CXX_FLAGS_DEBUG}")
