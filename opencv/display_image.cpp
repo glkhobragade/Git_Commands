@@ -29,7 +29,7 @@ int main( )
     imc = new uchar[sz]; 
     imc = im.data;
     memcpy(from_ch.data, imc, (im.size().height * im.size().width * 3));
-    from_ch.data = imc;
+    //from_ch.data = imc;
 
     //DISPLAY image
     namedWindow( "flower", CV_WINDOW_AUTOSIZE ); // Create a window for display.

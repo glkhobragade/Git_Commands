@@ -1,32 +1,31 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <dlfcn.h>
-#include <math.h>
+#include <unistd.h>
 
 int main(int argc, char **argv) {
 	void *handle;
-	double (*cosine)(double);
     double *p;
+    typedef int(*sqq)(int);
 	char *error;
 
-	handle = dlopen ("/lib/x86_64-linux-gnu/libm.so.6", RTLD_DEEPBIND);
+	handle = dlopen ("libsq.so", RTLD_NOW);
 	if (!handle) {
 		fputs (dlerror(), stderr);
 		exit(1);
 	}
 
-    cosine = dlsym(handle, "cos");
-    p = (double *)dlsym(handle, "M_PI");
+    p = (double *)dlsym(handle, "PII");
+    *p = 14;
+    //sqq sqr = reinterpret_cast<sqq>(dlsym(handle, "sq"));
     //pow(5,2);
 	if ((error = dlerror()) != NULL)  {
 		fputs(error, stderr);
 		exit(1);
 	}
-
-	printf ("%f\n", (*cosine)(2.0));
+    sleep(5);
 	printf ("%f\n", *p);
+	//printf ("%f\n", sqr(2));
 	dlclose(handle);
 
-    printf("\nForcing a segmentation fault: \n");
-    *(char *)0 = 0;
 }

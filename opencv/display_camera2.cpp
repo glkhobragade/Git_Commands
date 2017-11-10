@@ -18,19 +18,33 @@ int main(){
     return -1;
   }
   cout << "Default frame size is " << frame_height << " * " << frame_width;   
+    Mat frame(1280,720, CV_8UC3);
+    Mat newframe(1280,720,CV_8UC3);
+    uchar *frame_ptr = NULL;
+    frame_ptr = new uchar[1280*720*3];
+
   while(1){
  
-    Mat frame;
     // Capture frame-by-frame
-    cap >> frame;
+    //cap >> frame; or using below line
+    bool b = cap.read(frame);
+
+    //int height = frame.size().height;
+    //int width = frame.size().width;
+    //newframe = frame;  //===> this is a shallow copy thats why faster
+    newframe = frame.clone();
+    //newframe.data = frame.data;
+    //frame_ptr = frame.data;
+    //memcpy(newframe.data, frame.data, 1280*720*3); 
+
     fprintf(stdout, "Size of frame is %d\n", sizeof(frame));
   
     // If the frame is empty, break immediately
     if (frame.empty())
       break;
- 
+    //cvtColor(frame, newframe, CV_RGB2GRAY);  
     // Display the resulting frame
-    imshow( "Frame", frame );
+    imshow( "Frame", newframe );
  
     // Press  ESC on keyboard to exit
     char c=(char)waitKey(25);
