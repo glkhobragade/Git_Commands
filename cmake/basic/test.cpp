@@ -1,7 +1,8 @@
 #include<iostream>
-#include "my_library/header-a.hpp"
+//#include "my_library/header-a.hpp"
 
 using namespace std;
+extern int sqr(int);
 
 int main()
 {

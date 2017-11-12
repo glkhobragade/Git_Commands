@@ -1,0 +1,7 @@
+defining extern variable means that definition would be found later in the linking stage,
+
+but when test and sqrt are compiled together, even though there was extern variable in sqrt it dint show any error,
+because it was not used. Once that is used, then it gave error as undefined reference.
+
+
+

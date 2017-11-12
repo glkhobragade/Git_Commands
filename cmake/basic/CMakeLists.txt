@@ -8,7 +8,8 @@ set(COMPONENT_VERSION 3.1.2)
 SET(PACKAGE_VERSION "${COMPONENT_VERSION}")
 
 add_executable(text test.cpp)
-add_library(sqrt  SHARED sqrt.cpp)
+add_library(sqrt  SHARED lib/sqrt.cpp)
+target_link_libraries(text sqrt)
 
 # below line activates the DEBUG flag in all the compilation command
 # it can be checked whether it works in subdirectory as well.

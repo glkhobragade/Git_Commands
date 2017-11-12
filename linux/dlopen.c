@@ -9,7 +9,7 @@ int main(int argc, char **argv) {
     int (*sqq)(int);
 	char *error;
 
-	handle = dlopen ("libsq.so", RTLD_LAZY);
+	handle = dlopen ("libsq.so", RTLD_NOW);
 	if (!handle) {
 		fputs (dlerror(), stderr);
 		exit(1);
