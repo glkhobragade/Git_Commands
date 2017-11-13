@@ -1,0 +1,726 @@
+cscope 15 $HOME/Programs/Git_Commands/design_pattern               0000003730
+	@ak47.hpp
+
+1 #iâdeà
+_Ak47_H_
+
+
+2 
+	#_AK47_H_
+
+
+	)
+
+4 
+	~<io¡»am
+>
+
+5 þas 
+	cak47
+
+
+7 
+	mpublic
+:
+
+8 
+	$ak47
+()
+
+10 
+¡d
+::
+cout
+ << "IÀ¨ak47 cÏs cÚ¤uùÜ" << std::
+’dl
+;
+
+12 ~
+	$ak47
+()
+
+14 
+¡d
+::
+cout
+ << "IÀ¨ak47 cÏs de¤uùÜ" << std::
+’dl
+;
+
+15 
+	}
+}
+
+16 
+	$fœe
+()
+
+18 
+¡d
+::
+cout
+ << "ak47 ha fœed " << std::
+’dl
+;
+
+19 
+	}
+}
+
+	@battleField.cpp
+
+1 
+	~<io¡»am
+>
+
+2 
+	~"w—pÚCÚŒÞËr.hµ
+"
+
+4 
+usšg
+ 
+Çme¥aû
+ 
+	g¡d
+;
+
+6 þas 
+	cB©Žef›ldSoáw¬e
+
+
+8 
+	m´iv©e
+:
+
+9 
+w—pÚCÚŒÞËr
+* 
+wc
+;
+
+10 
+	mpublic
+:
+
+11 
+	$B©Žef›ldSoáw¬e
+(è: 
+	`wc
+(
+Ãw
+ 
+	$w—pÚCÚŒÞËr
+()) {
+
+12 
+cout
+ << "InsidthB©Žef›ldSoáw¬cÚ¡ruùÜ" << 
+’dl
+;
+
+14 ~
+	$B©Žef›ldSoáw¬e
+(è{ 
+d–‘e
+ 
+wc
+;
+
+15 
+cout
+ << "InsidthB©Žef›ldSoáw¬de¡ruùÜ" << 
+’dl
+;
+
+16 
+	}
+}
+
+18 
+	$shoÙT¬g‘
+()
+
+20 
+cout
+ << "shoÙT¬g‘ insidB©Žef›ldSoáw¬e" << 
+’dl
+;
+
+21 
+wc
+->
+	`shoÙT¬g‘
+();
+
+22 
+	}
+}
+
+25 
+	$maš
+()
+
+27 
+B©Žef›ldSoáw¬e
+* 
+bf
+ = 
+Ãw
+ 
+	`B©Žef›ldSoáw¬e
+();
+
+28 
+cout
+ << "B©Žf›d soáw¬objeù i ü—‹d." << 
+’dl
+;
+
+29 
+bf
+->
+	`shoÙT¬g‘
+();
+
+30 
+d–‘e
+ 
+bf
+;
+
+31 
+	}
+}
+
+	@gun.hpp
+
+1 #iâdeà
+_GUN_H_
+
+
+2 
+	#_GUN_H_
+
+
+	)
+
+4 
+	~<io¡»am
+>
+
+5 þas 
+	cgun
+
+
+7 
+	mpublic
+:
+
+8 
+	$gun
+()
+
+10 
+¡d
+::
+cout
+ << "IÀ¨guÀþas cÚ¤uùÜ" << std::
+’dl
+;
+
+12 ~
+	$gun
+()
+
+14 
+¡d
+::
+cout
+ << "IÀ¨guÀþas de¡ruùÜ" << std::
+’dl
+;
+
+15 
+	}
+}
+
+16 
+	$fœe
+()
+
+18 
+¡d
+::
+cout
+ << "GuÀha fœed " << std::
+’dl
+;
+
+19 
+	}
+}
+
+	@missile.hpp
+
+1 #iâdeà
+_MISSILE_H_
+
+
+2 
+	#_MISSILE_H_
+
+
+	)
+
+4 
+	~<io¡»am
+>
+
+5 þas 
+	cmissže
+
+
+7 
+	mpublic
+:
+
+8 
+	$missže
+()
+
+10 
+¡d
+::
+cout
+ << "IÀ¨missžþas cÚ¤uùÜ" << std::
+’dl
+;
+
+12 ~
+	$missže
+()
+
+14 
+¡d
+::
+cout
+ << "IÀ¨missžþas de¤uùÜ" << std::
+’dl
+;
+
+15 
+	}
+}
+
+16 
+	$fœe
+()
+
+18 
+¡d
+::
+cout
+ << "missžha fœed " << std::
+’dl
+;
+
+19 
+	}
+}
+
+	@weaponController.hpp
+
+1 #iâdeà
+__WEAPON_CNTL__
+
+
+2 
+	#__WEAPON_CNTL__
+
+
+	)
+
+5 
+	~<io¡»am
+>
+
+6 
+	~"w—pÚIÁ”çû.hµ
+"
+
+8 
+usšg
+ 
+Çme¥aû
+ 
+	g¡d
+;
+
+10 þas 
+	cw—pÚCÚŒÞËr
+
+
+12 
+w—pÚIÁ”çû
+ *
+	mwIÁf
+;
+
+14 
+	mpublic
+:
+
+15 
+	$w—pÚCÚŒÞËr
+():
+	`wIÁf
+(
+Ãw
+ 
+	$w—pÚMissže
+())
+
+17 
+cout
+ << "Insid¨w—pÚCÚŒÞË¸cÚ¡ruùÜ" << 
+’dl
+;
+
+19 ~
+	$w—pÚCÚŒÞËr
+(){
+d–‘e
+ 
+wIÁf
+;
+
+20 
+cout
+ << "Insid¨w—pÚCÚŒÞË¸de¡ruùÜ" << 
+’dl
+;
+
+21 
+	}
+}
+
+23 
+	$shoÙT¬g‘
+()
+
+25 
+cout
+ << "shoÙT¬g‘ insidw—pÚCÚŒÞËr" << 
+’dl
+;
+
+26 
+wIÁf
+->
+	`shoÙT¬g‘
+();
+
+27 
+	}
+}
+
+	@weaponInterface.hpp
+
+1 #iâdeà
+_WINTF_
+
+
+2 
+	#_WINTF_
+
+
+	)
+
+4 
+	~<io¡»am
+>
+
+5 
+	~"gun.hµ
+"
+
+6 
+	~"missže.hµ
+"
+
+7 
+	~"ak47.hµ
+"
+
+9 
+usšg
+ 
+Çme¥aû
+ 
+	g¡d
+;
+
+11 þas 
+	cw—pÚIÁ”çû
+
+
+13 
+	mpublic
+:
+
+14 
+	$w—pÚIÁ”çû
+()
+
+16 
+cout
+ << "IÀw—pÚIÁ”çû cÚ¡ruùÜ " << 
+’dl
+;
+
+18 
+vœtu®
+ 
+	`shoÙT¬g‘
+() = 0;
+
+19 
+	}
+};
+
+22 þas 
+	cw—pÚGun
+ : 
+public
+ 
+w—pÚIÁ”çû
+
+
+24 
+gun
+ *
+g
+;
+
+26 
+	mpublic
+:
+
+27 
+	$w—pÚGun
+():
+	`g
+(
+Ãw
+ 
+	$gun
+()) {
+
+28 
+cout
+ << "Insidthw—pÚGuÀcÚ¡ruùÜ" << 
+’dl
+;
+
+30 ~
+	$w—pÚGun
+(){
+d–‘e
+ 
+g
+;
+
+31 
+cout
+ << "Insidthw—pÚGuÀde¡ruùÜ" << 
+’dl
+;
+
+32 
+	}
+}
+
+33 
+	$shoÙT¬g‘
+()
+
+35 
+¡d
+::
+cout
+ << "shoÙT¬g‘ insidw—pÚGuÀIÁ”çû" << 
+’dl
+;
+
+36 
+g
+->
+	`fœe
+();
+
+37 
+	}
+}
+
+40 þas 
+	cw—pÚAk47
+ : 
+public
+ 
+w—pÚIÁ”çû
+
+
+42 
+ak47
+ *
+ak
+;
+
+44 
+	mpublic
+:
+
+45 
+	$w—pÚAk47
+():
+	`ak
+(
+Ãw
+ 
+	$ak47
+()) {
+
+47 
+cout
+ << "Insidthw—pÚAk47 cÚ¡ruùÜ" << 
+’dl
+;
+
+49 ~
+	$w—pÚAk47
+(){
+d–‘e
+ 
+ak
+;
+
+50 
+cout
+ << "Insidthw—pÚAk47 de¡ruùÜ" << 
+’dl
+;
+
+51 
+	}
+}
+
+52 
+	$shoÙT¬g‘
+()
+
+54 
+¡d
+::
+cout
+ << "shoÙT¬g‘ insidw—pÚAk47 IÁ”çû" << 
+’dl
+;
+
+55 
+ak
+->
+	`fœe
+();
+
+56 
+	}
+}
+
+59 þas 
+	cw—pÚMissže
+ : 
+public
+ 
+w—pÚIÁ”çû
+
+
+61 
+missže
+ *
+m
+;
+
+63 
+	mpublic
+:
+
+64 
+	$w—pÚMissže
+():
+	`m
+(
+Ãw
+ 
+	$missže
+()) {
+
+65 
+cout
+ << "Insidthw—pÚMissžcÚ¡ruùÜ" << 
+’dl
+;
+
+67 ~
+	$w—pÚMissže
+(){
+d–‘e
+ 
+m
+;
+
+68 
+cout
+ << "Insidthw—pÚMissžcÚ¡ruùÜ" << 
+’dl
+;
+
+69 
+	}
+}
+
+70 
+	$shoÙT¬g‘
+()
+
+72 
+¡d
+::
+cout
+ << "shoÙT¬g‘ insidw—pÚMissžIÁ”çû" << 
+’dl
+;
+
+73 
+m
+->
+	`fœe
+();
+
+74 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+6
+86
+ak47.hpp
+battleField.cpp
+gun.hpp
+missile.hpp
+weaponController.hpp
+weaponInterface.hpp

@@ -1,0 +1,51 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BattlefieldSoftware	battleField.cpp	/^        BattlefieldSoftware() : wc(new weaponController()) {$/;"	f	class:BattlefieldSoftware
+BattlefieldSoftware	battleField.cpp	/^class BattlefieldSoftware$/;"	c	file:
+_AK47_H_	ak47.hpp	2;"	d
+_GUN_H_	gun.hpp	2;"	d
+_MISSILE_H_	missile.hpp	2;"	d
+_WINTF_	weaponInterface.hpp	2;"	d
+__WEAPON_CNTL__	weaponController.hpp	2;"	d
+ak	weaponInterface.hpp	/^    ak47 *ak;$/;"	m	class:weaponAk47
+ak47	ak47.hpp	/^    ak47()$/;"	f	class:ak47
+ak47	ak47.hpp	/^class ak47$/;"	c
+fire	ak47.hpp	/^    void fire()$/;"	f	class:ak47
+fire	gun.hpp	/^    void fire()$/;"	f	class:gun
+fire	missile.hpp	/^    void fire()$/;"	f	class:missile
+g	weaponInterface.hpp	/^    gun *g;$/;"	m	class:weaponGun
+gun	gun.hpp	/^    gun()$/;"	f	class:gun
+gun	gun.hpp	/^class gun$/;"	c
+m	weaponInterface.hpp	/^    missile *m;$/;"	m	class:weaponMissile
+main	battleField.cpp	/^int main()$/;"	f
+missile	missile.hpp	/^    missile()$/;"	f	class:missile
+missile	missile.hpp	/^class missile$/;"	c
+shootTarget	battleField.cpp	/^        void shootTarget()$/;"	f	class:BattlefieldSoftware
+shootTarget	weaponController.hpp	/^    void shootTarget()$/;"	f	class:weaponController
+shootTarget	weaponInterface.hpp	/^    void shootTarget()$/;"	f	class:weaponAk47
+shootTarget	weaponInterface.hpp	/^    void shootTarget()$/;"	f	class:weaponGun
+shootTarget	weaponInterface.hpp	/^    void shootTarget()$/;"	f	class:weaponMissile
+wIntf	weaponController.hpp	/^    weaponInterface *wIntf;$/;"	m	class:weaponController
+wc	battleField.cpp	/^        weaponController* wc;$/;"	m	class:BattlefieldSoftware	file:
+weaponAk47	weaponInterface.hpp	/^    weaponAk47():ak(new ak47()) {$/;"	f	class:weaponAk47
+weaponAk47	weaponInterface.hpp	/^class weaponAk47 : public weaponInterface$/;"	c
+weaponController	weaponController.hpp	/^    weaponController():wIntf(new weaponMissile())$/;"	f	class:weaponController
+weaponController	weaponController.hpp	/^class weaponController$/;"	c
+weaponGun	weaponInterface.hpp	/^    weaponGun():g(new gun()) {$/;"	f	class:weaponGun
+weaponGun	weaponInterface.hpp	/^class weaponGun : public weaponInterface$/;"	c
+weaponInterface	weaponInterface.hpp	/^        weaponInterface()$/;"	f	class:weaponInterface
+weaponInterface	weaponInterface.hpp	/^class weaponInterface$/;"	c
+weaponMissile	weaponInterface.hpp	/^    weaponMissile():m(new missile()) {$/;"	f	class:weaponMissile
+weaponMissile	weaponInterface.hpp	/^class weaponMissile : public weaponInterface$/;"	c
+~BattlefieldSoftware	battleField.cpp	/^        ~BattlefieldSoftware() { delete wc;$/;"	f	class:BattlefieldSoftware
+~ak47	ak47.hpp	/^    ~ak47()$/;"	f	class:ak47
+~gun	gun.hpp	/^    ~gun()$/;"	f	class:gun
+~missile	missile.hpp	/^    ~missile()$/;"	f	class:missile
+~weaponAk47	weaponInterface.hpp	/^    ~weaponAk47(){delete ak;$/;"	f	class:weaponAk47
+~weaponController	weaponController.hpp	/^    ~weaponController(){delete wIntf;$/;"	f	class:weaponController
+~weaponGun	weaponInterface.hpp	/^    ~weaponGun(){delete g;$/;"	f	class:weaponGun
+~weaponMissile	weaponInterface.hpp	/^    ~weaponMissile(){delete m;$/;"	f	class:weaponMissile
