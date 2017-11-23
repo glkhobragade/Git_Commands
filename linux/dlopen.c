@@ -6,6 +6,7 @@
 int main(int argc, char **argv) {
 	void *handle;
     double *p;
+    double *q;
     int (*sqq)(int);
 	char *error;
 
@@ -32,6 +33,9 @@ int main(int argc, char **argv) {
 	}
 
 	printf ("%f\n", *p);
+    *p = 55;
+    q = (double *)dlsym(handle, "PII");
+	printf ("%f\n", *q);
 	printf ("%d\n", (*sqq)(5));
 	printf ("%d\n", (*sqq)(25));
 	dlclose(handle);
