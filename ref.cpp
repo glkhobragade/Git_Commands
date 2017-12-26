@@ -30,4 +30,5 @@ int main()
     student s2(s1);
     cout << "\nstudent 1 marks" << s1.getMarks();
     cout << "\nstudent 2 marks" << s2.marks;
+    cout << s2.name << endl;
 }

@@ -47,6 +47,6 @@ int main()
     const int &l = m;
     cout << l << endl;
     
-    l = n;  // l is an const ref, so it cant give reference to another variable, so this will give an compilation error.
+    //l = n;  // l is an const ref, so it cant give reference to another variable, so this will give an compilation error.
     return 0;
 }
