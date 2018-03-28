@@ -28,11 +28,11 @@ void PrintNum( int x )
 int main( int argc, char * argv[] )
 {
 	boost::shared_ptr< boost::asio::io_service > io_service(
-	new boost::asio::io_service
-	);
+	new boost::asio::io_service);
+
 	boost::shared_ptr< boost::asio::io_service::work > work(
-	new boost::asio::io_service::work( *io_service )
-	);
+	new boost::asio::io_service::work( *io_service ));
+
 	boost::asio::io_service::strand strand( *io_service );
 
 	global_stream_lock.lock();
@@ -43,7 +43,7 @@ int main( int argc, char * argv[] )
 	boost::thread_group worker_threads;
 	for( int x = 0; x < 4; ++x )
 	{
-	worker_threads.create_thread( boost::bind( &WorkerThread, io_service ) );
+        worker_threads.create_thread( boost::bind( &WorkerThread, io_service ) );
 	}
 
 	boost::this_thread::sleep( boost::posix_time::milliseconds( 100 ) );

@@ -1,0 +1,2 @@
+
+   int sq(int num);

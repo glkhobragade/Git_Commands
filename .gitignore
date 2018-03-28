@@ -1,4 +1,6 @@
 a.out
+*.so
+*.o
 [Bb]uild/
 dlopen
 cmake/foonathan.net/runtime/

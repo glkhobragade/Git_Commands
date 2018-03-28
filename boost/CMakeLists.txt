@@ -14,7 +14,7 @@ include_directories("${PROJECT_SOURCE_DIR}")
 
 #LINK_DIRECTORIES("$ENV{ROS2_LIB_PATH}")
 
-add_executable(boost_test thread.cpp)
+add_executable(boost_test chrono.cpp)
 set(LIBS
   boost_thread
   boost_system
